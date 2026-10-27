@@ -1,72 +1,231 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>CV Alya Fathinah Z</title>
-        <style>
-            body {
-                font-family: 'Poppins', Arial, sans-serif;
-                color: darkslategrey;
-                background-color:  honeydew;
-            }
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Alya Fathinah Z</title>
+    <!-- Hubungkan ke Bootstrap 5 CSS via CDN -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <!-- Google Fonts: Plus Jakarta Sans (Font Estetik & Modern) -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --sage-green: #849687;
+            --soft-cream: #f4f1ea;
+            --dark-olive: #3d4a41;
+            --warm-sand: #e6e1d6;
+        }
 
-            h1 {
-                color: darkcyan;
-                font-family: Georgia, serif;
-            }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--soft-cream);
+            color: var(--dark-olive);
+        }
 
-            h2 {
-                color: teal;
-                border-bottom: 2px solid teal;
-            }
+        /* Foto Profil Berbentuk Kotak Rapi dengan Rounded Ringan */
+        .profile-img-square {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 16px; /* Kotak dengan sudut melengkung estetik */
+            border: 4px solid white;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
+        }
 
-            .highlight {
-                color: darkorange;
-            }
+        /* Header Elegan & Berkelas */
+        .header-section {
+            background-color: var(--sage-green);
+            color: white;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
 
-            .keahlian-teks {
-                font-family: 'courier new', monospace;
-                color: darkolivegreen;
-            }
-        </style>
-    </head>
-    <body> 
+        /* Card Custom yang Estetik */
+        .custom-card {
+            background: white;
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(61, 74, 65, 0.05);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
 
-        <br>
-        <div align="center">
-            <h1><font color="teal">Alya Fathinah Zahrah</font></h1>
+        .section-title {
+            font-weight: 700;
+            color: var(--dark-olive);
+            letter-spacing: -0.5px;
+            position: relative;
+            padding-bottom: 10px;
+        }
 
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--sage-green);
+            border-radius: 2px;
+        }
 
-            <img src="alyafz2.jpeg" width="150" height="150" style="border-radius: 12px; object-fit: cover; border: 3px solid navy;">
+        /* Badge Nilai dan IPK */
+        .custom-badge {
+            background-color: #eef2ef;
+            color: var(--sage-green);
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            display: inline-block;
+        }
 
-            <p>Tasikmalaya,Jawa Barat|089678084441|Email:alyafthin27@gmail.com|linkedin.com/In/Alyaa Fathinh</p>
+        /* Pill Keahlian */
+        .skill-pill {
+            background-color: var(--soft-cream);
+            border: 1px solid var(--warm-sand);
+            color: var(--dark-olive);
+            font-weight: 500;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .skill-pill:hover {
+            background-color: var(--sage-green);
+            color: white;
+        }
+
+        /* Accordion Custom */
+        .accordion-item {
+            border: 1px solid var(--warm-sand) !important;
+            border-radius: 12px !important;
+            margin-bottom: 0.5rem;
+            overflow: hidden;
+        }
+        .accordion-button {
+            font-weight: 600;
+            color: var(--dark-olive);
+            background-color: white;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: var(--soft-cream);
+            color: var(--sage-green);
+            box-shadow: none;
+        }
+
+        /* Carousel Estetik */
+        .carousel-custom {
+            background-color: var(--dark-olive);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            color: var(--soft-cream);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER & BIODATA UTAMA -->
+    <header class="header-section py-5 text-center text-md-start mb-5">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-md-auto text-center">
+                    <!-- Foto Profil Kotak Rapi -->
+                    <img src="foto/alyafz2.jpeg" alt="Alya Fathinah Zahrah" class="profile-img-square">
+                </div>
+                <div class="col-md">
+                    <h1 class="fw-bold display-5 mb-2" style="letter-spacing: -1px;">Alya Fathinah Zahrah</h1>
+                    <p class="lead mb-3 opacity-90" style="font-weight: 500;">D4 Teknologi Rekayasa Perangkat Lunak</p>
+                    <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-start text-white-50" style="font-size: 0.9rem;">
+                        <span>📍 Tasikmalaya, Jawa Barat</span> | 
+                        <span>📞 089678084441</span> | 
+                        <span>✉️ alyafthin27@gmail.com</span> | 
+                        <span>🔗 ://linkedin.com Fathinh</span>
+                    </div>
+                </div>
+            </div>
         </div>
+    </header>
 
-        <hr size="3" color="teal" width="90%">
+    <div class="container">
+        <div class="row">
+            
+            <!-- KOLOM KIRI: TENTANG SAYA & PENDIDIKAN -->
+            <div class="col-lg-8">
+                <!-- Tentang Saya -->
+                <div class="custom-card">
+                    <h2 class="section-title mb-4">Tentang Saya</h2>
+                    <p class="mb-0" style="line-height: 1.8; font-size: 1.05rem; text-align: justify;">
+                        Saya seorang mahasiswi program studi Teknologi Rekayasa Perangkat Lunak semester 3 dengan IPK 3,97. Saya aktif di berbagai organisasi kampus dalam bidang media juga mempunyai hobi membaca novel, buku sejarah dan jurnal, menonton film serta traveling.
+                    </p>
+                </div>
 
-        <h2>Tentang Saya</h2>
-        <p>Saya seorang mahasiswi program studi Teknologi Rekayasa Perangkat Lunak semester 3 dengan IPK 3,97. Saya aktif diberbagai organisasi kampus dalam bidang media juga mempunyai hobi membaca novel,buku sejarah dan jurnal menonton film serta traveling.</p>
+                <!-- Pendidikan -->
+                <div class="custom-card">
+                    <h2 class="section-title mb-4">Pendidikan</h2>
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="fw-bold mb-0">SMA-T Manahijul Huda</h5>
+                            <span class="text-muted small">2022 - 2024</span>
+                        </div>
+                        <p class="text-muted mb-2">Kompetisi Keahlian: Matematika, Kimia, Biologi (MIPA)</p>
+                        <div class="custom-badge">Nilai Rata-rata Ujian: 89,61</div>
+                    </div>
+                    <hr style="border-color: var(--warm-sand);">
+                    <div class="mt-4">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="fw-bold mb-0">Politeknik Manahijul Huda</h5>
+                            <span class="text-muted small">2025 - 2026</span>
+                        </div>
+                        <p class="text-muted mb-2">Prodi Teknologi Rekayasa Perangkat Lunak</p>
+                        <div class="custom-badge" style="background-color: #e8f5e9; color: #2e7d32;">Nilai IPK: 3,97</div>
+                    </div>
+                </div>
+            </div>
 
-        <h2>Pendidikan</h2>
-        <p><strong>SMA-T Manahijul Huda</strong></p>
-        <P>Kompetisi Keahlian: Matematika, Kimia, Biologi(MIPA)|(2022-2024)<br> Nilai Rata-rata Ujian:89,61</P>
-        <p><strong>Prodi Teknologi Rekayasa Prangkat Lunak</strong>- Politeknik Manahijul Huda (2025-2026) <br>
-             Nilai IPK:3,97</p>
+            <!-- KOLOM KANAN: KEAHLIAN (KOMPONEN 1: CARDS) -->
+            <div class="col-lg-4">
+                <div class="custom-card">
+                    <h2 class="section-title mb-4">Keahlian</h2>
+                    <!-- Item Keahlian Berbentuk Grid Cards / Pills Minimalis -->
+                    <div class="d-flex flex-column gap-3">
+                        <div class="skill-pill">Perhitungan Matematika</div>
+                        <div class="skill-pill">Pemrograman Dasar</div>
+                        <div class="skill-pill">Video Editing</div>
+                        <div class="skill-pill">Desain Canva</div>
+                        <div class="skill-pill">Public Speaking</div>
+                    </div>
+                </div>
+            </div>
 
-             <h2>Pengalaman Organisasi</h2>
-             <ul>
-                <li><strong>UKM Meditif</strong> - Jabatan: Divisi Content Hunter ( tugas mencari konten untuk dipublikasikan)</li>
-                <li><strong>LPPM</strong> - Jabatan: Bagian Editing (tugas mengedit berkas visual) </li>
-                <li><strong>HIMA TRPL</strong> - Jabatan: Anggota aktif dibidang media kampus</li>
-             </ul>
+        </div> <!-- End Row -->
 
-             <h2>Kepanitian dan Prestasi</h2>
-             <ul>
-                <li>Menjadi pemateri/ pembicara untuk mahasiswa baru (MABA)</li>
-                <li>Peserta lomba menyanyi tingkat kampus</li>
-                <li>Aktif mengikuti berbagai kegiatan webinar lintas bidang</li>
-             </ul>
-
-             <h2>Keahlian</h2>
-             <p>perhitungan matematika,pemograman dasar,video editing desain canva,dan public speaking.</p>
-    </body>
-</html>
+        <!-- BARIS BARU: ORGANISASI (KOMPONEN 2: ACCORDION) -->
+        <div class="row">
+            <div class="col-12">
+                <div class="custom-card">
+                    <h2 class="section-title mb-4">Pengalaman Organisasi</h2>
+                    <!-- Bootstrap Accordion Minimalis -->
+                    <div class="accordion" id="accordionOrganisasi">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#org1" aria-expanded="true">
+                                    UKM Meditif — Divisi Content Hunter
+                                </button>
+                            </h2>
+                            <div id="org1" class="accordion-collapse collapse show" data-bs-parent="#accordionOrganisasi">
+                                <div class="accordion-body text-muted" style="line-height: 1.7;">
+                                    Memiliki tugas utama untuk aktif mencari, meriset, dan mengumpulkan konten-konten menarik serta edukatif untuk dipublikasikan pada media komunikasi kampus.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#org2">
+                                    LPPM — Bagian Editing
+                                </button>
+                            </h2>
+                            <div id="org2" class="accordion-collapse collapse" data-bs-parent="#accordionOrganisasi">
+                                <div class="accordion-body text-muted" style="line-height: 1.7;">
